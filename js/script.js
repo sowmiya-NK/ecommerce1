@@ -133,8 +133,8 @@ const signup = () => {
       } else {
         sessionStorage.setItem("userId", loggedUser.id);
         if (usernameRef.value === "sowmiya123@admin.com")
-          location.replace("/admin/admin.html");
-        else location.replace("/admin/user/index.html");
+          location.replace("/ecommerce1/admin.html");
+        else location.replace("/ecommerce1/index.html");
       }
     } else {
       errorRef.innerText = " Please,Enter a valid mailId";
@@ -171,7 +171,7 @@ const signin = () => {
         });
         localStorage.setItem("users", JSON.stringify(users));
         alert("login successfuly!!");
-        location.href = "/admin/signin.html";
+        location.href = "/ecommerce1/signin.html";
       } else {
         errorRef.innerText = "password are incorrect";
       }
@@ -213,7 +213,7 @@ const addToCart = (id) => {
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!sessionStorage.getItem("userId")) {
-    location.href = "/admin/user/signup.html";
+    location.href = "/ecommerce1/signup.html";
   } else {
     let userId = parseInt(sessionStorage.getItem("userId"));
     let cart = [];
@@ -257,7 +257,7 @@ const updateCartCount = () => {
         cartcountRef.innerText = `cart - ${cartcount}`;
       } else cartcountRef.innerText = `cart`;
     } else {
-      location.href = "/admin/user/signup.html";
+      location.href = "/ecommerce1/signup.html";
     }
   }
 };
@@ -301,7 +301,7 @@ const loadCartPage = () => {
       cartTableRef.innerHTML = add;
       totalRef.innerText = `Total - ₹ ${total}`;
     } else {
-      location.href = "/admin/user/signup.html";
+      location.href = "/ecommerce1/signup.html";
     }
   }
 };
@@ -338,10 +338,10 @@ const checkoutdetails = () => {
       localStorage.setItem("orders", JSON.stringify(orders));
 
       updateCartCount();
-      location.href = "/admin/order.html";
-    } else location.href = "/admin/user/index.html";
+      location.href = "/ecommerce1/order.html";
+    } else location.href = "/ecommerce1/index.html";
   } else {
-    location.href = "/admin/user/signup.html";
+    location.href = "/ecommerce1/signup.html";
   }
 };
 
@@ -377,9 +377,9 @@ const loadOrderPage = () => {
         <td>${order.status}</td></tr>`;
       }
       tableRef.innerHTML = add;
-    } else location.href = "/admin/user/home.html";
+    } else location.href = "/ecommerce1/home.html";
   } else {
-    location.href = "/admin/signin.html";
+    location.href = "/ecommerce1/signin.html";
   }
 };
 
@@ -440,10 +440,10 @@ const loadAdminorderpage = () => {
         });
       }
     } else {
-      location.href = "/admin/user/index.html";
+      location.href = "/ecommerce1/index.html";
     }
   } else {
-    location.href = "/admin/user/signin.html";
+    location.href = "/ecommerce1/signin.html";
   }
 };
 
@@ -524,11 +524,11 @@ const saveorupdate = () => {
   }, 2000);
 
   localStorage.setItem("products", JSON.stringify(products));
-  location.href = "/admin/admin.html";
+  location.href = "/ecommerce1/admin.html";
 };
 
 const logout = () => {
   console.log("checl");
   sessionStorage.removeItem("userId");
-  location.replace("/admin/signin.html");
+  location.replace("/ecommerce1/signin.html");
 };
