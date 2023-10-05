@@ -1,0 +1,22 @@
+.logo {
+  width: 7%;
+  height: 7%;
+}
+.link {
+  text-decoration: none;
+}
+.sales {
+  height: 500px;
+  width: 100%;
+}
+
+.carousel-inner{
+  height: 700px;
+  width: 100%;
+  margin: 2px  5px 0 5px;
+}
+
+.img{
+  width: 20px;
+  height: 50px;
+}
