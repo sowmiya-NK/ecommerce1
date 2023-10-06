@@ -75,20 +75,20 @@ window.addEventListener("load", () => {
   if (!localStorage.getItem("products"))
     localStorage.setItem("products", JSON.stringify(initialProducts));
 
-  if (location.pathname === "/admin/user/index.html") loadHomepage(); //home page will load
+  if (location.pathname === "/index.html") loadHomepage(); //home page will load
 
-  if (location.pathname === "/admin/admin.html") loadAdminpage();
+  if (location.pathname === "/admin.html") loadAdminpage();
 
   if (
-    location.pathname === "/admin/user/index.html" ||
-    location.pathname === "/admin/order.html" ||
-    location.pathname === "/admin/user/card.html"
+    location.pathname === "/index.html" ||
+    location.pathname === "/order.html" ||
+    location.pathname === "/card.html"
   )
     updateCartCount();
 
-  if (location.pathname === "/admin/user/card.html") loadCartPage();
-  if (location.pathname === "/admin/order.html") loadOrderPage();
-  if (location.pathname === "/admin/adminorder.html") loadAdminorderpage();
+  if (location.pathname === "/card.html") loadCartPage();
+  if (location.pathname === "/order.html") loadOrderPage();
+  if (location.pathname === "/adminorder.html") loadAdminorderpage();
 });
 
 // random number generator
@@ -206,6 +206,8 @@ const loadHomepage = () => {
   }
   productrowRef.innerHTML = add;
 };
+
+loadHomepage();
 
 //addtocart page
 const addToCart = (id) => {
