@@ -75,21 +75,21 @@ window.addEventListener("load", () => {
   if (!localStorage.getItem("products"))
     localStorage.setItem("products", JSON.stringify(initialProducts));
 
-  if (location.pathname === "/index.html" || location.pathname === "/")
+  if (location.pathname === "/ecommerce1/index.html" || location.pathname === "/")
     loadHomepage(); //home page will load
 
-  if (location.pathname === "/admin.html") loadAdminpage();
+  if (location.pathname === "/ecommerce1/admin.html") loadAdminpage();
 
   if (
-    location.pathname === "/index.html" ||
-    location.pathname === "/order.html" ||
-    location.pathname === "/card.html"
+    location.pathname === "/ecommerce1/index.html" ||
+    location.pathname === "/ecommerce1/order.html" ||
+    location.pathname === "/ecommerce1/card.html"
   )
     updateCartCount();
 
-  if (location.pathname === "/card.html") loadCartPage();
-  if (location.pathname === "/order.html") loadOrderPage();
-  if (location.pathname === "/adminorder.html") loadAdminorderpage();
+  if (location.pathname === "/ecommerce1/card.html") loadCartPage();
+  if (location.pathname === "/ecommerce1/order.html") loadOrderPage();
+  if (location.pathname === "/ecommerce1/adminorder.html") loadAdminorderpage();
 });
 
 // random number generator
