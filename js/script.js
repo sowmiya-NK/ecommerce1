@@ -211,7 +211,7 @@ const loadHomepage = () => {
   productrowRef.innerHTML = add;
 };
 
-// loadHomepage();
+loadHomepage();
 
 //addtocart page
 const addToCart = (id) => {
