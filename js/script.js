@@ -75,7 +75,10 @@ window.addEventListener("load", () => {
   if (!localStorage.getItem("products"))
     localStorage.setItem("products", JSON.stringify(initialProducts));
 
-  if (location.pathname === "/ecommerce1/index.html" || location.pathname === "/")
+  if (
+    location.pathname === "/ecommerce1/index.html" ||
+    location.pathname === "/"
+  )
     loadHomepage(); //home page will load
 
   if (location.pathname === "/ecommerce1/admin.html") loadAdminpage();
@@ -205,7 +208,7 @@ const loadHomepage = () => {
     </div>
     </div>`;
   }
-  if (productrowRef) productrowRef.innerHTML = add;
+  productrowRef.innerHTML = add;
 };
 
 loadHomepage();
