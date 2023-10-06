@@ -78,20 +78,23 @@ window.addEventListener("load", () => {
   if (
     location.pathname === "/ecommerce1/index.html" ||
     location.pathname === "/"
-  )
-    loadHomepage(); //home page will load
+  ) {
+    loadHomepage();
+    updateCartCount();
+  }
 
   if (location.pathname === "/ecommerce1/admin.html") loadAdminpage();
 
-  if (
-    location.pathname === "/ecommerce1/index.html" ||
-    location.pathname === "/ecommerce1/order.html" ||
-    location.pathname === "/ecommerce1/card.html"
-  )
+  if (location.pathname === "/ecommerce1/order.html") {
+    loadOrderPage();
     updateCartCount();
+  }
 
-  if (location.pathname === "/ecommerce1/card.html") loadCartPage();
-  if (location.pathname === "/ecommerce1/order.html") loadOrderPage();
+  if (location.pathname === "/ecommerce1/card.html") {
+    loadCartPage();
+    updateCartCount();
+  }
+
   if (location.pathname === "/ecommerce1/adminorder.html") loadAdminorderpage();
 });
 
@@ -210,8 +213,6 @@ const loadHomepage = () => {
   }
   productrowRef.innerHTML = add;
 };
-
-loadHomepage();
 
 //addtocart page
 const addToCart = (id) => {
