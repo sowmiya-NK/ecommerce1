@@ -264,6 +264,7 @@ const updateCartCount = () => {
   }
 };
 
+
 //load a cart page
 const loadCartPage = () => {
   const cartTableRef = document.getElementById("cartTableBody");
