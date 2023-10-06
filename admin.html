@@ -16,20 +16,20 @@
 
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid d-flex justify-content-evenly">
-        <img src="/ecommerce1/images/shop.jpg" alt="logo" class="logo" style="height:80px;width:100px;"/>
+      <div class="container-fluid">
+        <img
+          src="/ecommerce1/images/shop.jpg"
+          alt="logo"
+          class="logo"
+          style="height: 80px; width: 100px"
+        />
         <a href="/ecommerce1/index.html" class="link text-success">Home</a>
         <a href="/ecommerce1/card.html" class="link text-success">shop</a>
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle w-100"
-            type="button"
-            data-bs-toggle="dropdown"
+        <button class="btn btn-success">
+          <a href="/ecommerce1/adminorder.html" class="link text-white"
+            >order</a
           >
-            all product
-          </button>
-          
-        <button class="btn btn-success" ><a href="/ecommerce1/adminorder.html" class="link text-white" >order</a></button>
+        </button>
 
         <button onclick="logout()" class="btn btn-outline-success">
           Logout
