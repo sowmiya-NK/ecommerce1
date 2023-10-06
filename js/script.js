@@ -257,6 +257,7 @@ const updateCartCount = () => {
           a += cur.count;
           return a;
         }, 0);
+        if(cartcountRef)
         cartcountRef.innerText = `cart - ${cartcount}`;
       } else cartcountRef.innerText = `cart`;
     } else {
