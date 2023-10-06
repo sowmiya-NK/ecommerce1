@@ -204,6 +204,7 @@ const loadHomepage = () => {
     </div>
     </div>`;
   }
+  if(productrowRef)
   productrowRef.innerHTML = add;
 };
 
