@@ -75,7 +75,8 @@ window.addEventListener("load", () => {
   if (!localStorage.getItem("products"))
     localStorage.setItem("products", JSON.stringify(initialProducts));
 
-  if (location.pathname === "/index.html" || location.pathname === "/") loadHomepage(); //home page will load
+  if (location.pathname === "/index.html" || location.pathname === "/")
+    loadHomepage(); //home page will load
 
   if (location.pathname === "/admin.html") loadAdminpage();
 
@@ -204,11 +205,10 @@ const loadHomepage = () => {
     </div>
     </div>`;
   }
-  if(productrowRef)
-  productrowRef.innerHTML = add;
+  if (productrowRef) productrowRef.innerHTML = add;
 };
 
-// loadHomepage();
+loadHomepage();
 
 //addtocart page
 const addToCart = (id) => {
@@ -257,15 +257,13 @@ const updateCartCount = () => {
           a += cur.count;
           return a;
         }, 0);
-        if(cartcountRef)
-        cartcountRef.innerText = `cart - ${cartcount}`;
+        if (cartcountRef) cartcountRef.innerText = `cart - ${cartcount}`;
       } else cartcountRef.innerText = `cart`;
     } else {
       location.href = "/ecommerce1/signup.html";
     }
   }
 };
-
 
 //load a cart page
 const loadCartPage = () => {
@@ -465,7 +463,7 @@ const loadAdminpage = () => {
     <td>${pro.description}</td>
     <td>${pro.price}</td>
     <td class="d-flex justify-content- center">
-    <button class ="btn btn-primary me-2 " onClick="editproduct(${pro.id})">Edit</button>
+    
     <button class ="btn btn-danger " onClick="deleteproduct(${pro.id})">Delete</button>
     </td>
     </tr>`;
